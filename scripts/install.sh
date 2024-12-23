@@ -22,5 +22,7 @@ prompt_bright "Would you like to install the basic OVOS Skills? [Y/n]: "
 read install_basic_skills
 if [[ -z "$install_basic_skills" || $install_basic_skills == y* || $install_basic_skills == Y* ]]; then
     echo_info "Installing basic skills..."
-    ovos-install ovos-skill-date-time
+    uv pip install -c https://github.com/OpenVoiceOS/ovos-releases/raw/refs/heads/main/constraints-testing.txt \
+        ovos-skill-date-time \
+        ovos-skill-weather
 fi
