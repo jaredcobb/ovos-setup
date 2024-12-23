@@ -27,7 +27,7 @@ prompt_bright "Would you like to update and upgrade apt? [Y/n]: "
 read update_apt
 if [[ -z "$init" || $init == y* || $init == Y* ]]; then
     sudo apt -y update && sudo apt -y upgrade
-    sudo apt install -y vim
+    sudo apt install -y vim lnav
 fi
 
 echo_info "Refreshing logo..."
@@ -42,6 +42,8 @@ wget -O /home/ovos/.cli_login.sh https://gist.githubusercontent.com/jaredcobb/f6
 
 echo "" >> /home/ovos/.bashrc
 echo "alias l='ls -la'" >> /home/ovos/.bashrc
+echo "alias ovos='/bin/bash ~/.cli_login.sh'" >> /home/ovos/.bashrc
+echo "alias logs='lnav /home/ovos/.local/state/mycroft'" >> /home/ovos/.bashrc
 
 chown ovos:ovos /home/ovos/.logo.sh
 chown ovos:ovos /home/ovos/.cli_login.sh

@@ -26,6 +26,7 @@ echo
 echo "OVOS Log Viewer:"
 echo "  ovos-logs [COMMAND] --help      Small tool to help navigate the logs"
 echo "  ologs                           View all logs realtime"
+echo "  logs                            View all logs using lnav"
 echo
 echo "Misc Helpful COMMANDs:"
 echo "  ovos-status             List OVOS-related systemd services"
