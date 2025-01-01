@@ -25,7 +25,7 @@ fi
 
 prompt_bright "Would you like to update and upgrade apt? [Y/n]: "
 read update_apt
-if [[ -z "$init" || $init == y* || $init == Y* ]]; then
+if [[ -z "$update_apt" || $update_apt == y* || $update_apt == Y* ]]; then
     sudo apt -y update && sudo apt -y upgrade
     sudo apt install -y vim lnav
 fi
