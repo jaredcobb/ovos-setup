@@ -37,8 +37,8 @@ fi
 if [ -f /home/ovos/.cli_login.sh ]; then
     mv /home/ovos/.cli_login.sh /home/ovos/.cli_login.sh.bak.$(date +%Y%m%d_%H%M%S)
 fi
-wget -O /home/ovos/.logo.sh https://gist.githubusercontent.com/jaredcobb/f66facf9e9f4915a2dd4003f2f99e757/raw/7841b0e57b0fef1ff69998b8cdcf1f13e232c44a/logo.sh
-wget -O /home/ovos/.cli_login.sh https://gist.githubusercontent.com/jaredcobb/f66facf9e9f4915a2dd4003f2f99e757/raw/7841b0e57b0fef1ff69998b8cdcf1f13e232c44a/cli_login.sh
+wget -O /home/ovos/.logo.sh https://raw.githubusercontent.com/jaredcobb/ovos-setup/refs/heads/master/scripts/logo.sh
+wget -O /home/ovos/.cli_login.sh https://raw.githubusercontent.com/jaredcobb/ovos-setup/refs/heads/master/scripts/cli_login.sh
 
 echo "" >> /home/ovos/.bashrc
 echo "alias l='ls -la'" >> /home/ovos/.bashrc
