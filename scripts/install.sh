@@ -27,9 +27,9 @@ if [[ -z "$install_basic_skills" || $install_basic_skills == y* || $install_basi
         ovos-skill-weather
 fi
 
-prompt_bright "Would you like to restart OVOS services? [Y/n]: "
-read restart_services
-if [[ -z "$restart_services" || $restart_services == y* || $restart_services == Y* ]]; then
-    echo_info "Restarting OVOS services..."
-    systemctl --user restart ovos
+prompt_bright "Would you like to restart now? [Y/n]: "
+read restart
+if [[ -z "$restart" || $restart == y* || $restart == Y* ]]; then
+    echo_info "See you soon!"
+    sudo reboot now
 fi
