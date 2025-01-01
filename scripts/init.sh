@@ -21,6 +21,7 @@ read init
 if [[ -z "$init" || $init == y* || $init == Y* ]]; then
     echo_info "Initializing hardware..."
     sudo raspi-config nonint do_change_locale en_US.UTF-8
+    source /etc/default/locale
 fi
 
 prompt_bright "Would you like to update and upgrade apt? [Y/n]: "
